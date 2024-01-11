@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include "../../../../../usr/include/c++/11/pstl/glue_algorithm_defs.h"
 using namespace std;
 
 // Basic Operations on vectors (dynamic arrays)
@@ -26,6 +27,11 @@ int main(){
     // Resizing the vector
     v.resize(16);
     cout<<v.size()<<" and "<<v.capacity()<<endl;
+
+    reverse(v.begin(), v.end());
+    for(int i = 0; i < v.size(); i++){
+        cout<<v[i]<<endl;
+    }
 
     return 0;
 }
